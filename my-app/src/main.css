@@ -1,0 +1,22 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	
+}
+
+
+
+.card-container{
+	display: grid;
+	grid-template-columns: 1fr 70%;
+	grid-template-rows: 20% 1fr;
+	
+}
+
+
+
+.card-img-container{
+	background: url("https://picsum.photos/200/300");
+	grid-column: 1;
+	grid-row: 1/3;
+}

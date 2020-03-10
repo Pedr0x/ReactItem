@@ -1,0 +1,20 @@
+{
+  "name": "ReactItem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedr0x/ReactItem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedr0x/ReactItem/issues"
+  },
+  "homepage": "https://github.com/Pedr0x/ReactItem#readme"
+}
