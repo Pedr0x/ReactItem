@@ -4,6 +4,61 @@
 	
 }
 
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background: linear-gradient(to bottom, #1a2980, #26d0ce);
+  box-shadow: 0;
+  width: 100vw;
+  color: black;
+  height: 5vh;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5%;
+}
+
+.cart {
+  border-radius: 5px;
+  background: white;
+  color: purple;
+  padding: 10px;
+}
+.shopping-item {
+  margin: 2%;
+  padding: 5%;
+  line-height: 1.5;
+}
+.shopping-item-img-container {
+  widows: 100%;
+}
+.shopping-item-img-container img {
+  width: 100%;
+}
+
+button {
+  font-weight: 600;
+  border: 0;
+  color: white;
+  padding: 1% 2%;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #1a2980, #26d0ce);
+  box-shadow: 0;
+}
+
+.main-shopping-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
 
 
 .card-container{
