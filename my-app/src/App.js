@@ -1,10 +1,10 @@
 import React from "react";
 import "./main.css";
-import ShoppingSection from "./shoppingArea";
-import ShoppingData from "./shoppingData";
-import alert from "./alert";
-import MainProductContainer from "./mainProduct";
-import Footer from "./footer"
+import ShoppingSection from "./components/shoppingArea/shoppingArea";
+import ShoppingData from "./components/shoppingData/shoppingData";
+//import alert from "./alert";
+import MainProductContainer from "./components/mainProduct/mainProduct";
+import Footer from "./components/footer/footer"
 
 import {
   BrowserRouter as Router,
@@ -13,15 +13,6 @@ import {
   Link
 } from "react-router-dom";
 // import  products  from "./data.js";
-
-
-
-
-
-
-
-
-
 
 ///navbar with shopping cart
 //main shopping area
@@ -114,17 +105,6 @@ class App extends React.Component {
 
  
   render() {
-    
-    
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
   
     return (
       <div>

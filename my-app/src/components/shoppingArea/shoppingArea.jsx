@@ -1,5 +1,6 @@
 import React from "react";
-import "./main.css";
+//import "./main.css";
+
 
 import {
   BrowserRouter as Router,
@@ -8,7 +9,7 @@ import {
   Link
 } from "react-router-dom";
 
-import MainProductContainer from "./mainProduct";
+import MainProductContainer from "../mainProduct/mainProduct";
 
 var Exam = () => {
 	return(
