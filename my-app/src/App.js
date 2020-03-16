@@ -1,4 +1,8 @@
 import React from "react";
+import Helmet from "react-helmet";
+
+import "./pedr0x.css";
+
 import "./main.css";
 import ShoppingSection from "./components/shoppingArea/shoppingArea";
 import ShoppingData from "./components/shoppingData/shoppingData";
@@ -24,7 +28,10 @@ const Nav = props => {
     <nav className="navbar">
       <div className="cart-icon-container">
         {" "}
-        <div className="cart"> {props.cartsItems} </div>{" "}
+        <div className="cart">
+	  <i class="material-icons">
+shopping_cart
+</i> {props.cartsItems} </div>
       </div>
     </nav>
   );
@@ -107,6 +114,14 @@ class App extends React.Component {
   render() {
   
     return (
+		<>
+		   <Helmet>
+      <title>Pedr0x´s shop</title>
+		  <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="author" content="pedr0xxxxx" />
+    </Helmet>
+		
       <div>
         <Nav cartsItems={this.state.productsBought} />
        
@@ -121,7 +136,9 @@ class App extends React.Component {
 
 		<Footer/>
       </div>
+		</>
     );
+	  
   }
 }
 export default App;
