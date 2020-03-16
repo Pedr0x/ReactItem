@@ -5,6 +5,13 @@ import ShoppingData from "./shoppingData";
 import alert from "./alert";
 import MainProductContainer from "./mainProduct";
 import Footer from "./footer"
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 // import  products  from "./data.js";
 
 
@@ -44,7 +51,7 @@ class App extends React.Component {
     this.getProduct = this.getProduct.bind(this);
     this.deleteProduct = this.deleteProduct.bind(this);
     //this.getState = this.getState.bind(this);
-	   this.getLastProductInfo = this.getLastProductInfo.bind(this);
+//	   this.getLastProductInfo = this.getLastProductInfo.bind(this);
 
 
   }
@@ -74,13 +81,11 @@ class App extends React.Component {
       customerHasBoughtYet: true,
       productsBought: prevstate.productsBought + 1,
       ShoppedItems: [...this.state.ShoppedItems, a]
-      
-      
-
+     
     }
     
     
-    ) , (() => {lastItemBought: ShoppedItems[ShoppedItems.length - 1] } ));
+    ) );
     
     
     //console.log(this.state.lastItemBought.productTitle)
@@ -105,11 +110,8 @@ class App extends React.Component {
     }
   }
 
-	getLastProductInfo(elem){
-		this.setState({lastItemBought:elem});
-		
-		console.log("worked")
-	}
+
+
  
   render() {
     
@@ -134,16 +136,17 @@ class App extends React.Component {
           function={this.deleteProduct}
           ShoppedItems={this.state.ShoppedItems}
           customerHasBoughtYet={this.state.customerHasBoughtYet}
-		getLastProductInfo={this.getLastProductInfo}
-        />
+			getLastProductInfo={this.getLastProductInfo}
+        	/>
 
-        <MainProductContainer
-          customerHasBoughtYet={this.state.customerHasBoughtYet}
-          price={this.state.lastItemBought.productPrice}
-        />
 		<Footer/>
       </div>
     );
   }
 }
 export default App;
+
+//			<MainProductContainer
+ //         customerHasBoughtYet={this.state.customerHasBoughtYet}
+ //         price={this.state.lastItemBought.productPrice}
+  //      />

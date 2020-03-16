@@ -54,14 +54,14 @@ class MainProductContainer extends React.Component {
   }
 
   
-  ComponentDidUpdate(prevProps) {
-    // Uso tipico (no olvides de comparar los props):
-    console.log('222')
-  }
+//  ComponentDidUpdate(prevProps) {
+//    // Uso tipico (no olvides de comparar los props):
+//    console.log('222')
+//  }
 
 
   render() {
-    if (this.props.customerHasBoughtYet == true) {
+ 
       return (
         <div className="main-product-container">
           <MainProductImgContainer img={this.props.img} />
@@ -74,10 +74,7 @@ class MainProductContainer extends React.Component {
           <MainProductBanner />
         </div>
       );
-    } else {
-      return <h2> buy something first </h2>;
     }
   }
-}
 
 export default MainProductContainer;

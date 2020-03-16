@@ -1,4 +1,22 @@
 import React from "react";
+import "./main.css";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import MainProductContainer from "./mainProduct";
+
+var Exam = () => {
+	return(
+	<div className="big"> 
+	
+	
+	</div>)
+}
 
 var products = [
   {
@@ -31,8 +49,10 @@ var products = [
   }
 ];
 
+
 const ShoppingItem = props => {
   var myValue = 33;
+	var joinedString = props.itemName.split(" ").join("");
   //let aa = {props.itemName}
   return (
     <div className="shopping-item">
@@ -41,7 +61,7 @@ const ShoppingItem = props => {
       </div>
       
       <div className="shopping-item-text">
-        <h2 className="shopping-item-product-title"> {props.itemName}</h2>
+        <Link to={`/${joinedString}`} className="shopping-item-product-title"> {props.itemName}</Link>
         <h2 className="shopping-item-product-price"> {props.itemPrice} $</h2>
 
 		  {/* <p> {props.itemText} </p> */}
@@ -69,6 +89,17 @@ ShoppingItem.defaultProps = {
   itemPrice: 333
 };
 
+
+var Alert = props => {
+  return (
+    <div className="alert-container">
+      <h2>You have just bought {props.itemTitle} ! </h2>
+    </div>
+  );
+};
+
+
+
 var ShoppingSection = props => {
   const ShopComponents = products.map(item => (
     <ShoppingItem
@@ -79,7 +110,29 @@ var ShoppingSection = props => {
       function={props.function}
     />
   ));
-  return <div className="main-shopping-container">{ShopComponents}</div>;
-};
+
+	var ShoppingRoutes  = products.map(item => 
+	
+	
+	<Route
+          path={`/${ item.itemName.split(" ").join("")}`}
+          render={(props) => <MainProductContainer price={item.itemPrice} description={item.itemText} title={item.itemName} img={item.imgSrc} />} >
+          
+		</Route>
+									  )
+
+  return (
+<div className="main-shopping-container">
+  <Router>
+  	 {ShopComponents}
+  
+  	 	 <Switch>
+  	 {ShoppingRoutes}
+	  </Switch> 
+  </Router> 
+  <Alert/>
+  </div>
+)
+		}
 
 export default ShoppingSection;
