@@ -1,0 +1,17 @@
+
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20%;
+  padding: 2%;
+  background: linear-gradient(120deg,#070791,#0707bf);
+  color: white;
+}
+
+.footer-links-super-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	color: #d9bebe;
+	align-items: center;
+}
